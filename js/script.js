@@ -6,9 +6,11 @@ let years;
 
 // COLLECT VALUES FROM THE USER
 investment = parseFloat(prompt('Enter investment amount as xxxx.xx'));
+if (isNaN(investment)) {alert( 'Please enter a valid number');}
 rate = parseFloat(prompt('Enter interest rate as xx.x'));
+if (rate > 0.3 || rate < 0.01) { alert("Interest rate  must be between 0.01 and  0.3"); }
 years = parseInt(prompt('Enter the number of years you want to invest for'));
-
+if (isNaN(years)) {alert( 'Please enter a valid number');}
 // CALCULATE FUTURE VALUE
 futureValue = investment;
 for (let i = 0; i < years; i++) {
